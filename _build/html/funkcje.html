@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Funkcje &#8212; ping  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Instrukcja obsługi" href="instrukcja%20obs%C5%82ugi.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="instrukcja%20obs%C5%82ugi.html" title="Instrukcja obsługi"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ping  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Funkcje</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="funkcje">
+<h1>Funkcje<a class="headerlink" href="#funkcje" title="Permalink to this headline">¶</a></h1>
+<p>funkcje:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_values</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+    <span class="n">mini</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Minimum&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span><span class="p">:</span> <span class="n">line</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Minimum&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">14</span><span class="p">]</span>
+    <span class="n">maksi</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Maximum&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span><span class="p">:</span> <span class="n">line</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Maximum&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">14</span><span class="p">]</span>
+    <span class="n">avg</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Average&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span><span class="p">:</span> <span class="n">line</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Average&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">14</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">mini</span><span class="p">,</span> <span class="n">maksi</span><span class="p">,</span> <span class="n">avg</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_ip</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+    <span class="n">ip</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;[&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">line</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;]&#39;</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">ip</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run_command</span><span class="p">():</span>
+    <span class="n">problem</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;C:\WINDOWS\system32&#39;</span><span class="p">)</span>
+    <span class="n">domain</span><span class="p">,</span> <span class="n">num_of_calls</span> <span class="o">=</span> <span class="n">field_domain</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">field_num</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">stream</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;ping </span><span class="si">{0}</span><span class="s1"> -n </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">num_of_calls</span><span class="p">))</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">dane</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="n">ip</span> <span class="o">=</span> <span class="n">get_ip</span><span class="p">(</span><span class="n">dane</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">,</span> <span class="n">avg</span> <span class="o">=</span> <span class="n">get_values</span><span class="p">(</span><span class="n">dane</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">set_values</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">,</span> <span class="n">avg</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="n">problem</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        <span class="n">problem</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;niepoprawne dane&#39;</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="k">if</span> <span class="n">file_save</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">problem</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
+            <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="se">\\</span><span class="s1">ping_wyniki.txt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_dir</span><span class="o">.</span><span class="n">value</span><span class="p">),</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
+            <span class="c1">#print(&#39;{}\\wynik.txt&#39;.format(file_dir.value))</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Data pomiaru: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">())</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Domena: &#39;</span> <span class="o">+</span> <span class="n">field_domain</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;IP witryny: &#39;</span> <span class="o">+</span> <span class="n">ip_adress</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Wyslano sygnalow: &#39;</span> <span class="o">+</span> <span class="n">field_num</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Srednie opoznienie: &#39;</span> <span class="o">+</span> <span class="n">average</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">PermissionError</span><span class="p">:</span>
+            <span class="n">problem</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+            <span class="n">problem</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;Nieprawidłowa ścieżka&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">set_values</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="n">maks</span><span class="p">,</span> <span class="n">avg</span><span class="p">):</span>
+    <span class="n">minimum</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">maximum</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">average</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">ip_adress</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">minimum</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="nb">min</span>
+    <span class="n">maximum</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">maks</span>
+    <span class="n">average</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">avg</span>
+    <span class="n">ip_adress</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">ip</span>
+</pre></div>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="instrukcja%20obs%C5%82ugi.html"
+                        title="previous chapter">Instrukcja obsługi</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/funkcje.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="instrukcja%20obs%C5%82ugi.html" title="Instrukcja obsługi"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ping  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Funkcje</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Rafal Bawor.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+  </body>
+</html>
